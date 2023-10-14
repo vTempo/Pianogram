@@ -1,0 +1,109 @@
+body {
+  background-color: #ffeedb;
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 3.5vh;
+}
+
+#pianogram {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 80%;
+  width: 80%;
+  border: #D03C3C;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#top {
+  background-color: black;
+  height: 40%;
+}
+
+#pianogram > div {
+  width: 100%;
+}
+
+#octave {
+  display: flex;
+}
+
+.octave-btn {
+  border: 2px solid white;
+  width: 4vh;
+  height: 4vh;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  color: white;
+  text-decoration: none;
+}
+
+
+.octave-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.octave-btn:before {
+  content: "▶";
+}
+
+#down {
+  rotate: 180deg;
+}
+
+#top-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#instruments {
+  height: 5vh;
+  width: 40%;
+  border: transparent;
+}
+
+#piano, #parameters {
+  display: flex;
+  justify-content: space-between;
+}
+
+#parameters > div {
+  width: 20%;
+}
+
+#volume-container {
+  /* align-self: flex-end; */
+}
+
+#piano {
+  height: 60%;
+}
+
+.key {
+  height: 100%;
+  width: 9.6%;
+  background-color: white;
+  border: solid rgb(0, 0, 0);
+}
+
+.sharp {
+  width: 6.4%;
+  background-color: black;
+}
+
