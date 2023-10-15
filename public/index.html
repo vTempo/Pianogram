@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <title>Pianogram</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="#">
     <script src="index.js" charset="utf-8"></script>
   </head>
   <body>
@@ -14,6 +16,7 @@
         <div id="parameters">
           <div id="octave">
             <div class="octave-btn" id="down"></div>
+            <p>Mid</p>
             <div class="octave-btn" id="up"></div>
           </div>
           <div id="top-menu">
@@ -27,26 +30,25 @@
             </select>
           </div>
           <div id="volume-container">
-            <label for="volume">Volume</label>
             <input type="range" id="volume" name="volume" min="0" max="1" value="1" step="0.1" />
+            <label for="volume">Volume</label>
           </div>
         </div>
       </div>
       <div id="piano">
-        <div id="c" class="key"></div>
-        <div id="c-" class="key sharp"></div>
-        <div id="d" class="key"></div>
-        <div id="d-" class="key sharp"></div>
-        <div id="e" class="key"></div>
-        <div id="f" class="key"></div>
-        <div id="f-" class="key sharp"></div>
-        <div id="g" class="key"></div>
-        <div id="g-" class="key sharp"></div>
-        <div id="a" class="key"></div>
-        <div id="a-" class="key sharp"></div>
-        <div id="b" class="key"></div>
+        <div id="c" class="key"><div>C/A</div></div>
+        <div id="c-" class="key sharp"><div>C#/W</div></div>
+        <div id="d" class="key"><div>D/S</div></div>
+        <div id="d-" class="key sharp"><div>D#/E</div></div>
+        <div id="e" class="key"><div>E/D</div></div>
+        <div id="f" class="key"><div>F/F</div></div>
+        <div id="f-" class="key sharp"><div>F#/T</div></div>
+        <div id="g" class="key"><div>G/G</div></div>
+        <div id="g-" class="key sharp"><div>G#/Y</div></div>
+        <div id="a" class="key"><div>A/H</div></div>
+        <div id="a-" class="key sharp"><div>A#/U</div></div>
+        <div id="b" class="key"><div>B/J</div></div>
       </div>
     </div>
-    <div id="play-audio"></div>
   </body>
 </html>

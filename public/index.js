@@ -14,6 +14,59 @@
    */
   function init() {
     keyClick();
+    octaves();
+    document.addEventListener("keydown", control);
+  }
+
+  function octaves() {
+    id("up").addEventListener("click", upOct);
+    id("down").addEventListener("click", downOct);
+  }
+
+  function upOct() {
+    console.log(qs("#octave p").innerHTML);
+    if (qs("#octave p").innerHTML === "Low") {
+      qs("#octave p").innerHTML = "Mid";
+    } else if (qs("#octave p").innerHTML === "Mid") {
+      qs("#octave p").innerHTML = "High";
+    }
+  }
+
+  function downOct() {
+    console.log(qs("#octave p").innerHTML);
+    if (qs("#octave p").innerHTML === "High") {
+      qs("#octave p").innerHTML = "Mid";
+    } else if (qs("#octave p").innerHTML === "Mid") {
+      qs("#octave p").innerHTML = "Low";
+    }
+  }
+
+  function control(event) {
+    if (event.keyCode === 65) {
+      id("c").click();
+    } else if (event.keyCode === 87) {
+      id("c-").click();
+    } else if (event.keyCode === 83) {
+      id("d").click();
+    } else if (event.keyCode === 69) {
+      id("d-").click();
+    } else if (event.keyCode === 68) {
+      id("e").click();
+    } else if (event.keyCode === 70) {
+      id("f").click();
+    } else if (event.keyCode === 84) {
+      id("f-").click();
+    } else if (event.keyCode === 71) {
+      id("g").click();
+    } else if (event.keyCode === 89) {
+      id("g-").click();
+    } else if (event.keyCode === 72) {
+      id("a").click();
+    } else if (event.keyCode === 85) {
+      id("a-").click();
+    } else if (event.keyCode === 74) {
+      id("b").click();
+    }
   }
 
   function keyClick() {
@@ -35,7 +88,12 @@
     console.log(audioFile);
     let note = gen("audio");
     note.src = "audio/" + audioFile;
+    note.volume = id("volume").value;
     note.play();
+    this.classList.add("played");
+    setTimeout(() => {
+      this.classList.remove("played");
+    }, 250);
   }
 
   /** ------------------------------ Helper Functions  ------------------------------ */
