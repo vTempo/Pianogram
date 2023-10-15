@@ -84,8 +84,7 @@
     if (this.id.length === 2) {
       audioFile += "_";
     }
-    audioFile += id("instruments").value + ".wav";
-    console.log(audioFile);
+    audioFile += id("instruments").value + qs("#octave p").innerHTML.substring(0, 1) + ".wav";
     let note = gen("audio");
     note.src = "audio/" + audioFile;
     note.volume = id("volume").value;
